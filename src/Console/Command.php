@@ -101,7 +101,7 @@ trait Command
         }
 
         $questionHelper = $this->getHelperSet()->get('question');
-        $question = new Symfony\Component\Console\Question\ConfirmationQuestion($question, $default);
+        $question = new \Symfony\Component\Console\Question\ConfirmationQuestion($question, $default);
         return $questionHelper->ask($input, $output, $question);
     }
 }
